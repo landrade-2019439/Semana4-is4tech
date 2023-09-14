@@ -3,20 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormularioComponent } from './formulario/formulario.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { NumberFormatDirective } from './directives/number-format.directive';
+import { HoverHighlightDirective } from './directives/hover-highlight.directive';
+import { CopyToClipboardDirective } from './directives/copy-to-clipboard.directive';
+import { TruncatePipe } from './pipes/truncate.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormularioComponent
+    NumberFormatDirective,
+    HoverHighlightDirective,
+    CopyToClipboardDirective,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    RouterModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
